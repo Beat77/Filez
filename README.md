@@ -47,6 +47,8 @@ Once your database is properly seeded, build an Express app that serves the foll
 routes. Write database queries as necessary. Remember to use the appropriate body-parsing
 and error-handling middleware!
 
+- `GET /files` sends array of all files
+  - the name of the containing folder should be included as `folderName`
 - `GET /folders` sends array of all folders
 - `GET /folders/:id`
   - Sends 404 error message if folder doesn't exist
