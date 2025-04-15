@@ -48,7 +48,7 @@ routes. Write database queries as necessary. Remember to use the appropriate bod
 and error-handling middleware!
 
 - `GET /files` sends array of all files
-  - the name of the containing folder should be included as `folderName`
+  - the name of the containing folder should be included as `folder_name`
 - `GET /folders` sends array of all folders
 - `GET /folders/:id`
   - Sends 404 error message if folder doesn't exist
