@@ -36,6 +36,8 @@ Ref: folders.id < files.folder_id
 2. Write `db/schema.sql` to create tables according to the schema above.
    - The `name` column of `folders` is unique.
    - The _combination_ of `name` and `folder_id` of `files` is unique. (see [docs](https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-UNIQUE-CONSTRAINTS)!)
+   - There is a one-many relation: one folder can have many files.
+   - Folder deletion should cascade to all related files.
 3. Complete `seed.js` (and necessary queries) to seed the database with 3 folders.
    Each folder should be seeded with at least 5 files.
 
