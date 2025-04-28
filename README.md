@@ -41,6 +41,8 @@ Ref: folders.id < files.folder_id
 3. Complete `seed.js` (and necessary queries) to seed the database with 3 folders.
    Each folder should be seeded with at least 5 files.
 
+Test your code with `npm run test:database` before moving on.
+
 ## Server
 
 Once your database is properly seeded, build an Express app that serves the following
@@ -60,3 +62,5 @@ and error-handling middleware!
   - Sends 400 if request body is not provided
   - Sends 400 if request body is missing required fields
   - Creates a new file related to the specified folder and sends the file back with status 201
+
+You can test your code with `npm run test:server`.
