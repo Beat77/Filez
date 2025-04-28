@@ -19,7 +19,7 @@ table folders {
 table files {
   id serial [pk]
   name text [not null]
-  size integer [not null]
+  size int [not null]
   folder_id int [not null]
 
   indexes {
