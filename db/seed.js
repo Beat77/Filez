@@ -1,10 +1,11 @@
 import db from "#db/client";
 import {createFiles} from "#db/queries/files";
-import { createFolders } from "./queries/folders";
+import { createFolders } from "#db/queries/folders";
 
 
 await db.connect();
-await seed();
+await seedFiles();
+await seedFolders();
 await db.end();
 console.log("🌱 Database seeded.");
 
@@ -21,6 +22,6 @@ async function seedFiles() {
 async function seedFolders() {
   for (let i = 0; i< 3; i++) {
     const folders = {
-      name: "Folders" 
+      name: "Folders" + i,
     };
-    await createFolderss(folders);}}
+    await createFolders(folders);}}

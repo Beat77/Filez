@@ -1,16 +1,17 @@
 import db from "#db/client";
-import 
+
 export async function createFolders( {name}) {
     const sql = `
     INSERT INTO folders
     (name)
     VALUES
     ($1)
-    RETURNING *`;}
+    RETURNING *`;
     const {
         rows: [folders],
     } = await db.query(sql,[name]);
     return folders;
+}
 
     export async function getFolders() {
     const sql =`

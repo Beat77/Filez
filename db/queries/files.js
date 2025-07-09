@@ -19,14 +19,14 @@ export async function getFiles() {
     const {rows: files} = await db.query (sql);
     return files;  
 }
-export async function getFiles() {
+export async function getFilesById() {
     const sql= `
 SELECT
     files.*,
     files.name AS file_name
 FROM
     files 
-    JOIN folders ON folders.id=files.id;
+    JOIN folders ON folders.id=files.id`;
     const { row: files} = await db.query(sql);
     return files;}
-    
+

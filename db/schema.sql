@@ -7,7 +7,7 @@ CREATE TABLE folders (
 
 CREATE TABLE files (
     id serial PRIMARY KEY,
-    name text NOT NULL,
+    name text NOT NULL CONSTRAINT must_be_different UNIQUE,
     size integer NOT NULL,
-    folder_id integer NOT NULL
+    folder_id integer NOT NULL CONSTRAINT must_be_different UNIQUE
 );
